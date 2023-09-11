@@ -6,8 +6,8 @@ FROM python:slim
 RUN mkdir /lab1
 WORKDIR /lab1
 RUN pip install numpy scipy
-RUN apk add --update make cmake gcc g++ gfortran
-RUN pip install numpy scipy
+# RUN apk add --update make cmake gcc g++ gfortran
+# RUN pip install numpy scipy
 
 # RUN apk add --update python py-pip python-dev
 # RUN pip install cython
