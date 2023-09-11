@@ -4,7 +4,7 @@ RUN mkdir /lab1
 WORKDIR /lab1
 
 RUN apk add --update make cmake gcc g++ gfortran
-RUN apk add --update python py-pip python-dev
+# RUN apk add --update python py-pip python-dev
 RUN pip install cython
 RUN pip install numpy
 RUN pip install scikit-learn
