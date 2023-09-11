@@ -1,0 +1,20 @@
+name: Build and Push Image GHCR
+
+on:
+  push
+
+jobs:
+  publish-hello-docker-image:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+
+    - name: Build the hello-docker Docker image
+      run: |
+        docker login --username draj6 --password ${{secrets.GH_PAT}} ghcr.io
+        docker build . --tag ghcr.io/draj6/GHCR-docker:latest
+       
+        docker push ghcr.io/draj6/GHCR-docker:latest
