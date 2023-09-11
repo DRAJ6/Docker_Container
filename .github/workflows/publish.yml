@@ -16,10 +16,10 @@ jobs:
     
     - name: Docker Login
       env:
-        DOCKER_USER: ${{ secrets.DOCKERU }}   
-        DOCKER_PASSWORD: ${{ secrets.DOCKERP }}  
+        DOCKER_USER: ${{ secrets.DOCKU }}   
+        DOCKER_PASSWORD: ${{ secrets.DOCKP }}  
       run: |
-        docker login -u $DOCKERU -p $DOCKERP
+        docker login -u $DOCKU -p $DOCKP
 
         
     - name: Build and Push Image
