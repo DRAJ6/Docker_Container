@@ -1,4 +1,7 @@
-FROM python:3.8-alpine
+# FROM python:3.8-alpine
+
+FROM python:slim
+pip install numpy scipy
 
 RUN mkdir /lab1
 WORKDIR /lab1
@@ -13,7 +16,7 @@ RUN apk add --update make cmake gcc g++ gfortran
 #RUN pip install --no-cache-dir -r requirements.txt
 
 COPY requirements.txt requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
