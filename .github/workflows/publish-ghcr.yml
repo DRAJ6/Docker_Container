@@ -15,6 +15,6 @@ jobs:
     - name: Build the hello-docker Docker image
       run: |
         docker login --username draj6 --password ${{secrets.GH_PAT}} ghcr.io
-        docker build . --tag ghcr.io/draj6/GHCR-docker:latest
+        docker build . --tag ghcr.io/draj6/ghcr-docker:latest
        
-        docker push ghcr.io/draj6/GHCR-docker:latest
+        docker push ghcr.io/draj6/ghcr-docker:latest
