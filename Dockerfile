@@ -1,4 +1,4 @@
-FROM python:3.8-alpine
+FROM alpine:3.16
 
 RUN mkdir /lab1
 WORKDIR /lab1
@@ -7,11 +7,11 @@ WORKDIR /lab1
 # RUN apk add --update --no-cache py3-numpy
 # ENV PYTHONPATH=/usr/lib/python3.8/site-packages
 
-ADD repositories /etc/apk/repositories
-RUN apk add --update python python-dev gfortran py-pip build-base py-numpy@community
+RUN apk --no-cache --update-cache add  python3 py3-pip py3-arrow  py3-pandas # and py3-anything package need to be compiled
+#RUN pip install --no-cache-dir -r requirements.txt
 
 COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
