@@ -11,4 +11,4 @@ COPY . .
 LABEL maintainer="Dheeraj <jadheeraj.inbox@gmail.com>" \version="1.0"
 
 
-CMD python src/lab1.py
+CMD ["python", "src/lab1.py"]
