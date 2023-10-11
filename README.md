@@ -103,7 +103,7 @@ Please refer [this](https://github.com/shankar-dh/IE7374-Lab-01/blob/main/.githu
 - Notify on success: This step uses conditional logic with if: success() to check if all the unittest tests passed successfully. If they did, it runs the message "Unit tests passed successfully."
 - Notify on failure: Similarly, this step uses conditional logic with if: failure() to check if any of the unittest tests failed. If any test failed, it runs the message "Unit tests failed."
 
-- ## Step 3: Creating Logistic Regression Model for Data Prediction.
+## Step 4: Creating Logistic Regression Model for Data Prediction.
 
 This demonstrates the creation of a logistic regression model for data prediction using scikit-learn and other Python libraries.
 
